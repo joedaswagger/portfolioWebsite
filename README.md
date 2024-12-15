@@ -1,2 +1,2 @@
 # portfolioWebsite
-A website that doubles as my portfolio (includes projects, experience, etc.)
+My website that contains all my experiences, projects, etc. Also a learning experience to perfect JavaScript skills and learn React.
