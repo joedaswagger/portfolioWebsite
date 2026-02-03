@@ -1,11 +1,18 @@
-import Header from "./Header.jsx"
-import Footer from "./Footer.jsx"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Home } from "./pages/Home"
+import { NotFound } from "./pages/NotFound"
+
 
 function App() {
+
   return (
     <>
-    <Header/>
-    <Footer/>
+    <BrowserRouter>
+      <Routes>
+        <Route index element = {<Home/>}/>
+        <Route path="*" element = {<NotFound/>}/>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
