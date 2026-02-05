@@ -13,7 +13,7 @@ const projects = [
     {
         id: 2,
         title: "Top-Down Shooter",
-        description: "Made for CONUHACKS IX, this Java-based top-down shooter game was made from scratch, myself primarily being responsible for the game angine and level design",
+        description: "Made for CONUHACKS IX, this Java-based top-down shooter game was made from scratch, myself primarily being responsible for the game engine and level design",
         image: "/projects/topdown.PNG",
         tags: ["Java"],
         githubUrl: "https://github.com/v3r1510/1v1-Top-down-Shooter-Game"
