@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { cn } from "../lib/utils"
 import { X } from "lucide-react"
 import { Menu } from "lucide-react"
+import { ThemeToggle } from "./ThemeToggle"
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -63,6 +64,7 @@ export const Navbar = () => {
                 )}
             >
                 <div className="flex flex-col space-y-8 text-xl">
+                    
                     {navItems.map((item, key) => (
                         <a 
                         key={key} 
@@ -73,6 +75,7 @@ export const Navbar = () => {
                             {item.name}
                         </a>
                     ))} 
+                    
                 </div>
             </div>
         </div>
