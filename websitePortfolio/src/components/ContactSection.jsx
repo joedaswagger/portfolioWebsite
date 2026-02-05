@@ -2,15 +2,21 @@ import { Linkedin, Mail, MapPin, Section, Send } from "lucide-react"
 import { cn } from "../lib/utils"
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from "react";
+import { useToast } from "../hooks/use-toast";
 
 
 export const ContactSection = () => {
+    const { toast } = useToast()
+
+    const [isSubmitting, setIsSubmitting] = useState(false)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        setIsSubmitting(true)
 
         const serviceId = 'service_1gdf5ns'
         const templateId = 'template_ihout96'
@@ -29,12 +35,17 @@ export const ContactSection = () => {
                 setName('')
                 setEmail('')
                 setMessage('')
-
+                toast({
+                    title: "Message sent!",
+                    description: "I will get back to you as soon as possible"
+                })
+                setIsSubmitting(false)
             })
             .catch((error) => {
                 console.error('Error sending email: ', error)
+                setIsSubmitting(false)
             }) 
-
+        
     }
 
 
@@ -123,10 +134,10 @@ export const ContactSection = () => {
                                     onChange={(e) => setMessage(e.target.value)}/>
                                 </div>
 
-                                <button type="submit" className={cn("bombo-button w-full flex items-center justify-center gap-2", 
+                                <button type="submit" disabled={isSubmitting} className={cn("bombo-button w-full flex items-center justify-center gap-2", 
 
                                 )}>
-                                    Send Message <Send size={16}/>
+                                    {isSubmitting ? "Sending..." : "Send Message"} <Send size={16}/>
                                 </button>
                             </form>
                         </div>

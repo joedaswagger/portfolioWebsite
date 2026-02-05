@@ -30,10 +30,6 @@ export const AboutSection = () => {
                         <a href="#contact" className="bombo-button text-foreground" >
                             Let's talk
                         </a>
-
-                        <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
-                            Here's my CV
-                        </a>
                     </div>
                 </div>
 
