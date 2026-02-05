@@ -23,6 +23,7 @@ const skills = [
     { name: "VS Code", level: 95, category: "tools"},
     { name: "Jira", level: 95, category: "tools"},
     { name: "Confluence", level: 95, category: "tools"},
+    { name: "Raspberry Pi", level: 70, category: "tools"},
 ]
 
 const categories = ["all", "frontend", "backend", "tools"]
